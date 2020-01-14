@@ -6,6 +6,7 @@ Models:
         dose - integer
         date - string
         time - integer
+        
     User (has many records)
         name - string
         email - string
