@@ -5,17 +5,52 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    
+    <nav class="navbar navbar-expand-md navbar-light" style="background-color: #92cbf5;">
+      <div class="container">
+        <a class="navbar-brand font-weight-light" href="/">Blood Sugar Tracker</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link font-weight-lighter" href="/readings">Readings</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link font-weight-lighter" href="/readings/new">New Reading</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
     <% if notice %>
       <p class="alert alert-success"><%= notice %></p>
     <% end %>
     <% if alert %>
       <p class="alert alert-danger"><%= alert %></p>
     <% end %>
-    <%= yield %>
+    <br/>
+    <div class="container font-weight-lighter">
+      <%= yield %>
+    </div>
+
+    <footer>
+      <div class="container font-weight-lighter text-dark-50">
+        <br/>
+        <em>RyanEvns <%= Time.now.year %></em>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
   </body>
 </html>
