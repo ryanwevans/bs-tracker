@@ -30,6 +30,11 @@ body {
     margin: 0;
 }
 
+input {
+    font-family: inherit;
+    font-weight: inherit;
+  }
+
 .something {
      background-color: #92cbf5;
 }
