@@ -1,0 +1,27 @@
+<h2>Records Index Page</h2>
+<br/>
+<br/>
+<% @records.each do |record| %>
+    <p>
+      <%= record.date %>
+      <br/>
+      <%= record.time %>
+      <br/>
+      <span style="font-size:14px;">Reading: <%= record.reading %></span>
+      <br/>
+      <em>Dose: <%= record.dose %></em>
+      <br/>
+      <br/>
+    </p>
+  <br/>
+<% end %>
+
+
+<p>
+    <strong>Reading:</strong>
+    <%= @record.reading %>
+</p>
+<p>
+    <strong>Dose:</strong>
+    <%= @record.dose %>
+</p>

@@ -3,10 +3,7 @@ class RecordsController < ApplicationController
     include RecordsHelper
 
     def index
-        if params[:user_id]
-            @user = User.find_by(id: params[:user_id])
-            @records = @user.records
-        end
+        @records = Record.all
     end
 
 
@@ -54,7 +51,7 @@ class RecordsController < ApplicationController
     private
 
     def record_params
-        params.require(:record).permit(:reading, :dose, :date, :time, :user_id)
+        params.require(:record).permit(:user_id, :date, :time, :reading, :dose)
     end
 
     
