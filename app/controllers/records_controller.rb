@@ -3,7 +3,7 @@ class RecordsController < ApplicationController
     include RecordsHelper
 
     def index
-        @records = Record.all
+        @records = Record.all.sorted_desc
     end
 
 
