@@ -3,18 +3,15 @@
 <br/>
 <% @records.each do |record| %>
     <p>
-      <%= record.date.strftime('%m-%d-%Y') %>
+      <strong><%= record.date.strftime('%m-%d-%Y') %></strong>
       <br/>
-      <%= record.time.strftime('%I:%M %p') %>
+      <strong><%= record.time.strftime('%I:%M %p') %></strong>
       <br/>
-      <p>
-          <strong>Reading:</strong>
-          <%= record.reading %>
-      </p>
-      <p>
-          <strong>Dose:</strong>
-          <%= record.dose %>
-      </p>
+      Reading:
+      <%= record.reading %>
+      <br/>
+      Dose:
+      <%= record.dose %>
     </p>
   <br/>
 <% end %>
