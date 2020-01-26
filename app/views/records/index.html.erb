@@ -1,11 +1,10 @@
-<div class="flex-container">
+<div class="row">
   <h2>Records Index Page</h2>
 </div>
 <br>
-<div class="flex-container">
-  <div>
-    <% @records.each do |record| %>
-        <div class="record-item">
+<div class="row">
+  <% @records.each do |record| %>
+      <div class="col-sm">
           <strong><%= record.date.strftime('%m-%d-%Y') %></strong>
           <br/>
           <strong><%= record.time.strftime('%I:%M %p') %></strong>
@@ -15,8 +14,7 @@
           <br/>
           Dose:
           <%= record.dose %>
-        </div>
-      <br/>
-    <% end %>
-  </div>
+      </div>
+    <br/>
+  <% end %>
 </div>

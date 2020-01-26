@@ -34,13 +34,3 @@ input {
     font-family: inherit;
     font-weight: inherit;
 }
-
-.flex-container {
-    display: flex; /* or inline-flex */
-    flex-flow: row wrap;
-    /* justify-content: space-around; */
-}
-
-.record-item {
-    align-self: auto;
-}
