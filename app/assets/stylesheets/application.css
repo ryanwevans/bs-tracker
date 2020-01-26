@@ -33,8 +33,14 @@ body {
 input {
     font-family: inherit;
     font-weight: inherit;
-  }
+}
 
-.something {
-     background-color: #92cbf5;
+.flex-container {
+    display: flex; /* or inline-flex */
+    flex-flow: row wrap;
+    /* justify-content: space-around; */
+}
+
+.record-item {
+    align-self: auto;
 }

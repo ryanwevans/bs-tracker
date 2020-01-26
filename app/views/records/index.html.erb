@@ -1,17 +1,22 @@
-<h2>Records Index Page</h2>
-<br/>
-<br/>
-<% @records.each do |record| %>
-    <p>
-      <strong><%= record.date.strftime('%m-%d-%Y') %></strong>
+<div class="flex-container">
+  <h2>Records Index Page</h2>
+</div>
+<br>
+<div class="flex-container">
+  <div>
+    <% @records.each do |record| %>
+        <div class="record-item">
+          <strong><%= record.date.strftime('%m-%d-%Y') %></strong>
+          <br/>
+          <strong><%= record.time.strftime('%I:%M %p') %></strong>
+          <br/>
+          Reading:
+          <%= record.reading %>
+          <br/>
+          Dose:
+          <%= record.dose %>
+        </div>
       <br/>
-      <strong><%= record.time.strftime('%I:%M %p') %></strong>
-      <br/>
-      Reading:
-      <%= record.reading %>
-      <br/>
-      Dose:
-      <%= record.dose %>
-    </p>
-  <br/>
-<% end %>
+    <% end %>
+  </div>
+</div>
