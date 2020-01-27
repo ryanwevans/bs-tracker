@@ -2,19 +2,20 @@
   <h2>Records Index Page</h2>
 </div>
 <br>
-<div class="row">
+<div class="row align-items-center">
   <% @records.each do |record| %>
-      <div class="col-sm">
-          <strong><%= record.date.strftime('%m-%d-%Y') %></strong>
-          <br/>
+      <div class="col-sm-2">
+          <br>
+          <strong><%= record.date.strftime('%m-%d-%y') %></strong>
+          <br>
           <strong><%= record.time.strftime('%I:%M %p') %></strong>
-          <br/>
+          <br>
           Reading:
           <%= record.reading %>
-          <br/>
+          <br>
           Dose:
           <%= record.dose %>
       </div>
-    <br/>
+    <br>
   <% end %>
 </div>
