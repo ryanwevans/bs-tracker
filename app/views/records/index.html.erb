@@ -6,7 +6,7 @@
   <% @records.each do |record| %>
       <div class="col-sm-2">
           <br>
-          <strong><%= record.date.strftime('%m-%d-%y') %></strong>
+          <strong><%= record.date.strftime('%m-%d') %></strong>
           <br>
           <strong><%= record.time.strftime('%I:%M %p') %></strong>
           <br>
