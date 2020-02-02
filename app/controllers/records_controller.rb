@@ -8,7 +8,6 @@ class RecordsController < ApplicationController
 
 
     def show
-
     end
 
 
@@ -28,13 +27,12 @@ class RecordsController < ApplicationController
 
 
     def edit
-
     end
 
 
     def update
         if @record.update(record_params)
-            redirect_to @record
+            redirect_to records_path
         else
             render :edit
         end
