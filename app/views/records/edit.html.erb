@@ -1,0 +1,48 @@
+<div class="row">
+    <div class="col-sm">
+        <h2>Edit Reading</h2>
+    </div>
+</div>
+<br/>
+
+<%= form_for @record do |f| %>
+    <form>
+
+        <%= f.hidden_field :user_id, value: current_user.id %>
+        <div class="form-group row">        
+            <label for="date" class="col-sm-1 col-form-label">Date</label>
+            <div class="col-sm-1"">
+                <%= f.date_field :date, autofocus: true, :required => true %>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="time" class="col-sm-1 col-form-label">Time</label>
+            <div class="col-sm-1">
+                <%= f.time_field :time, :required => true %>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="reading" class="col-sm-1 col-form-label">Reading</label>
+            <div class="col-sm-1">
+                <%= f.number_field :reading, :required => true %>
+            </div>
+        </div>
+            
+        <div class="form-group row">
+            <label for="dose" class="col-sm-1 col-form-label">Dose</label>
+            <div class="col-sm-1">
+                <%= f.text_field :dose, :value => 'None', :required => true %>
+            </div>
+        </div>
+
+        <br/>
+        
+        <div class="form-group row">
+            <div class="col-sm-10">
+                <button type="submit" class="btn-sm btn-outline-success font-weight-light">Update</button>
+            </div>
+        </div>
+    </form>
+<% end %>
